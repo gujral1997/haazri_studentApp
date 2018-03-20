@@ -11,10 +11,10 @@ export default class StartUpScreen extends Component {
       ()=>{
         this.props.navigator.push(
           {
-            screen:'studentApp.LoginScreen',
+            screen:'studentApp.mainTab',
           }
         );
-      },3000
+ },3
 
     );
   }
