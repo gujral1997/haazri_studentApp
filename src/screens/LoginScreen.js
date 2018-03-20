@@ -14,15 +14,15 @@ export default class LoginScreen extends Component
      );*/
      if (Platform.OS !== 'android') return
      BackHandler.addEventListener('hardwareBackPress', () => {
-          // const { dispatch } = this.props;
+          const { dispatch } = this.props;
           // dispatch({ type: 'Navigation/BACK' });
           // dispatch({ type: 'Back' })
           ToastAndroid.showWithGravityAndOffset(
                     'Press Home to minize the App!',
                     ToastAndroid.LONG,
                     ToastAndroid.BOTTOM,
-                    50,
-                    30
+                    25,
+                    50
                   );
           return true;
     });
@@ -85,7 +85,7 @@ export default class LoginScreen extends Component
     {
       //post data to express backend point
       //fecth data via clients ip,local host never works
-      fetch('http://192.168.43.137:3000/users',{
+      fetch('http://192.168.56.1:3000/users',{
         method:'POST',
         headers:{
           'Accept':'application/json',
@@ -116,7 +116,15 @@ export default class LoginScreen extends Component
         }
 
       })
-      .done();
+      .catch(function(){
+            ToastAndroid.showWithGravityAndOffset(
+                     'Can\'t connect to Internet!',
+                     ToastAndroid.LONG,
+                     ToastAndroid.BOTTOM,
+                     25,
+                     50
+                   );
+      });
     }
   }
 const styles=StyleSheet.create({
