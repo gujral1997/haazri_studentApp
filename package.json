@@ -16,7 +16,7 @@
     "react-native-linear-gradient": "^2.4.0",
     "react-native-navigation": "^1.1.316",
     "react-native-vector-icons": "^4.4.3",
-    "react-navigation": "^1.0.0-beta.22"
+    "react-navigation": "^1.5.8"
   },
   "devDependencies": {
     "babel-jest": "23.0.0-alpha.0",
