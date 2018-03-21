@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ImageBackground, StyleSheet } from 'react-native';
 import {startSingleScreenApplicationLogin} from '../styles/navigatorStyles';
 import { Container, Header, Content, List, ListItem,Title, StyleProvider } from 'native-base';
 import material from '../../native-base-theme/variables/material';
@@ -32,13 +32,21 @@ export default class mainTab extends Component {
       {
             return(
                   <StyleProvider style={getTheme(material)}>
-                  <Container>
-                    <Header>
-                      <Title>Attendance Manager</Title>
-                    </Header>
-                    <Tabs />
-              </Container>
-        </StyleProvider>
+                         <Container>
+                           <Header>
+                             <Title>Attendance Manager</Title>
+                           </Header>
+                              <Tabs />
+                              <ImageBackground source={require('../images/bg01.jpg')} style={styles.image}>
+                              </ImageBackground>
+                         </Container>
+             </StyleProvider>
             );
       }
 }
+
+const styles = StyleSheet.create({
+  image: {
+
+ }
+});
