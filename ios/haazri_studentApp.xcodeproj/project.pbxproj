@@ -53,6 +53,9 @@
 		480653E4BFA249C79758BD80 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EDB9F984FD4E415BA7E8830F /* Zocial.ttf */; };
 		B3E2DF7D5185435E9C8DE952 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 873915C1680A442599BF079C /* Feather.ttf */; };
 		320F5839ADF9463FB55F47BF /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5CB96896E240D5904A0435 /* MaterialCommunityIcons.ttf */; };
+		C5A9552436054E76A1445776 /* AmrLipi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CF1DCE7816C4AEFAFD0ADC9 /* AmrLipi.ttf */; };
+		4D1BF0868EA3469FB09D590B /* Raleway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E3FC69A0212419B965D360F /* Raleway.ttf */; };
+		A460444723064D1D9774086C /* Stark.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69D4EFB997404B13A1E234F2 /* Stark.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +325,9 @@
 		EDB9F984FD4E415BA7E8830F /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		873915C1680A442599BF079C /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EF5CB96896E240D5904A0435 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8CF1DCE7816C4AEFAFD0ADC9 /* AmrLipi.ttf */ = {isa = PBXFileReference; name = "AmrLipi.ttf"; path = "../node_modules/native-base/Fonts/AmrLipi.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0E3FC69A0212419B965D360F /* Raleway.ttf */ = {isa = PBXFileReference; name = "Raleway.ttf"; path = "../node_modules/native-base/Fonts/Raleway.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		69D4EFB997404B13A1E234F2 /* Stark.ttf */ = {isa = PBXFileReference; name = "Stark.ttf"; path = "../node_modules/native-base/Fonts/Stark.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,6 +604,9 @@
 				EDB9F984FD4E415BA7E8830F /* Zocial.ttf */,
 				873915C1680A442599BF079C /* Feather.ttf */,
 				EF5CB96896E240D5904A0435 /* MaterialCommunityIcons.ttf */,
+				8CF1DCE7816C4AEFAFD0ADC9 /* AmrLipi.ttf */,
+				0E3FC69A0212419B965D360F /* Raleway.ttf */,
+				69D4EFB997404B13A1E234F2 /* Stark.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1007,6 +1016,9 @@
 				480653E4BFA249C79758BD80 /* Zocial.ttf in Resources */,
 				B3E2DF7D5185435E9C8DE952 /* Feather.ttf in Resources */,
 				320F5839ADF9463FB55F47BF /* MaterialCommunityIcons.ttf in Resources */,
+				C5A9552436054E76A1445776 /* AmrLipi.ttf in Resources */,
+				4D1BF0868EA3469FB09D590B /* Raleway.ttf in Resources */,
+				A460444723064D1D9774086C /* Stark.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
