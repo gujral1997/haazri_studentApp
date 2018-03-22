@@ -5,11 +5,28 @@ import { AnimatedCircularProgress,  CircularProgress } from 'react-native-circul
 import {startSingleScreenApplicationLogin} from '../../styles/navigatorStyles';
 const MAX_POINTS = 100;
 
-export default class UCS401 extends React.Component {
+function colours(points)
+{
+      if(points<=75)
+     {
+            return "red";
+     }
+     else {
+            {
+                 return "green";
+          }
+     }
+}
 
-  state = {
-    points: 100
-  };
+export default class UCS401 extends React.Component {
+      constructor(props) {
+            super(props);
+            this.state = {
+                  points: 60,
+                  color: '#dedede'
+            }
+      }
+
 
   componentDidMount() {
         this.refs.circularProgress.performLinearAnimation(this.state.points, 1000);
@@ -26,7 +43,7 @@ export default class UCS401 extends React.Component {
           size={200}
           width={30}
           fill={fill}
-          tintColor="#00e0ff"
+          tintColor={colours(this.state.points)}
           backgroundColor="#3d5875"
           ref='circularProgress'
         >
@@ -35,8 +52,8 @@ export default class UCS401 extends React.Component {
               <Text style={styles.points}>
                 { Math.round(MAX_POINTS * fill / 100) } %
               </Text>
-            )
-          }
+        )
+      }
         </AnimatedCircularProgress>
       </View>
     );
