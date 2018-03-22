@@ -85,7 +85,7 @@ export default class LoginScreen extends Component
     {
       //post data to express backend point
       //fecth data via clients ip,local host never works
-      fetch('http://192.168.56.1:3000/users',{
+      fetch('http://192.168.43.137:3000/users',{
         method:'POST',
         headers:{
           'Accept':'application/json',
@@ -105,7 +105,7 @@ export default class LoginScreen extends Component
           AsyncStorage.setItem('userName',userName);
           //Then we redirect to studentData
           this.props.navigator.push({
-            screen:'navigation.studentData'
+            screen:'studentApp.mainTab'
           });
           //If login,doesnt succeed
         }

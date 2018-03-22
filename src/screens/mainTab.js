@@ -12,7 +12,7 @@ import UCS402 from './tabscreens/UCS402';
 
 const Tabs = TabNavigator({
   UCS401: { screen: UCS401 },
-  UES100: { screen: UTA007},
+  UES100: { screen: UES100},
   UTA007: { screen: UTA007},
   UCS402: { screen: UCS402},
 },
