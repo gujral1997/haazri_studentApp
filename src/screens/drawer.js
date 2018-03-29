@@ -48,10 +48,10 @@ export default class drawer extends Component {
 		});
 	}
 
-      _goToabsent() {
+      _goTotimeTable() {
 		this._toggleDrawer();
 		this.props.navigator.push({
-      screen: "haazri_studentApp.studentImage"
+      screen: "haazri_studentApp.timeTable"
 		});
 	}
 
@@ -105,6 +105,19 @@ export default class drawer extends Component {
                                                  </View>
                                             </View>
                                        </TouchableOpacity>
+                                       <TouchableOpacity
+                                         style={styles.button}
+                                         onPress={this._goTotimeTable.bind(this)}
+                                        >
+                                             <View style={{flex:1, flexDirection: 'row'}}>
+                                                   <View style ={{flex:1}}>
+                                                         <Image source={require('../ICONS/ICONS_WHITE/02.png')} style={styles.icon}/>
+                                                   </View>
+                                                  <View style={{flex:8}}>
+                                                        <Text style={styles.text}> Time Table</Text>
+                                                  </View>
+                                             </View>
+                                        </TouchableOpacity>
                               </View>
                     </ImageBackground>
                   </Container>
