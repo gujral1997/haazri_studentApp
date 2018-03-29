@@ -11,12 +11,16 @@ export default class StartUpScreen extends Component {
       ()=>{
         this.props.navigator.push(
           {
-            screen:'studentApp.mainTab',
+            screen:'haazri_studentApp.afterLogin',
           }
         );
  },3
 
     );
+    this.props.navigator.setDrawerEnabled({
+      side: 'left', // the side of the drawer since you can have two, 'left' / 'right'
+      enabled: false // should the drawer be enabled or disabled (locked closed)
+    });
   }
   constructor () {
     super()
