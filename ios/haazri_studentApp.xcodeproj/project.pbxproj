@@ -56,6 +56,7 @@
 		C5A9552436054E76A1445776 /* AmrLipi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CF1DCE7816C4AEFAFD0ADC9 /* AmrLipi.ttf */; };
 		4D1BF0868EA3469FB09D590B /* Raleway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E3FC69A0212419B965D360F /* Raleway.ttf */; };
 		A460444723064D1D9774086C /* Stark.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69D4EFB997404B13A1E234F2 /* Stark.ttf */; };
+		B6CB566593CE49218C6B481A /* libRNUploader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323181878D5E4DB582598739 /* libRNUploader.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -328,6 +329,8 @@
 		8CF1DCE7816C4AEFAFD0ADC9 /* AmrLipi.ttf */ = {isa = PBXFileReference; name = "AmrLipi.ttf"; path = "../node_modules/native-base/Fonts/AmrLipi.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		0E3FC69A0212419B965D360F /* Raleway.ttf */ = {isa = PBXFileReference; name = "Raleway.ttf"; path = "../node_modules/native-base/Fonts/Raleway.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		69D4EFB997404B13A1E234F2 /* Stark.ttf */ = {isa = PBXFileReference; name = "Stark.ttf"; path = "../node_modules/native-base/Fonts/Stark.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23E3C2AE55274DAFBE653D1A /* RNUploader.xcodeproj */ = {isa = PBXFileReference; name = "RNUploader.xcodeproj"; path = "../node_modules/react-native-uploader/RNUploader/RNUploader.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		323181878D5E4DB582598739 /* libRNUploader.a */ = {isa = PBXFileReference; name = "libRNUploader.a"; path = "libRNUploader.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +362,7 @@
 				CBD4E4E4E7544409B23020AF /* libBVLinearGradient.a in Frameworks */,
 				BE6F9DB6C2EB4BAD95A9F261 /* libReactNativeNavigation.a in Frameworks */,
 				2020107236824228BF830617 /* libRNVectorIcons.a in Frameworks */,
+				B6CB566593CE49218C6B481A /* libRNUploader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +543,7 @@
 				5A2F69810C904AB4B9858E84 /* BVLinearGradient.xcodeproj */,
 				8D22C22016E341B59291F707 /* ReactNativeNavigation.xcodeproj */,
 				B6AFA49D4229450BB2817A82 /* RNVectorIcons.xcodeproj */,
+				23E3C2AE55274DAFBE653D1A /* RNUploader.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1155,6 +1160,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1181,6 +1187,7 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/haazri_studentApp.app/haazri_studentApp";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1269,6 +1276,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1307,6 +1315,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1340,6 +1349,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1364,6 +1374,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

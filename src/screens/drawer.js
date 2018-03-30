@@ -76,6 +76,13 @@ export default class drawer extends Component {
 		});
 	}
 
+      _goToupload() {
+		this._toggleDrawer();
+		this.props.navigator.push({
+      screen: "haazri_studentApp.upload"
+		});
+	}
+
       componentWillMount() {
             this.props.navigator.setDrawerEnabled({
               side: 'left',
@@ -155,6 +162,19 @@ export default class drawer extends Component {
                                                     </View>
                                                    <View style={{flex:8}}>
                                                          <Text style={styles.text}> Rate!</Text>
+                                                   </View>
+                                              </View>
+                                         </TouchableOpacity>
+                                         <TouchableOpacity
+                                          style={styles.button}
+                                          onPress={this._goToupload.bind(this)}
+                                         >
+                                              <View style={{flex:1, flexDirection: 'row'}}>
+                                                    <View style ={{flex:1}}>
+                                                          <Image source={require('../ICONS/ICONS_WHITE/02.png')} style={styles.icon}/>
+                                                    </View>
+                                                   <View style={{flex:8}}>
+                                                         <Text style={styles.text}> Upload</Text>
                                                    </View>
                                               </View>
                                          </TouchableOpacity>

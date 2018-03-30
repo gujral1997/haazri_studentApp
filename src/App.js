@@ -4,7 +4,7 @@ registerScreens();
 Navigation.startSingleScreenApp
 ({
 screen:{
-  screen:'haazri_studentApp.rating',
+  screen:'haazri_studentApp.upload',
 },
 drawer: {
             left: {
