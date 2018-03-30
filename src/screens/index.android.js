@@ -4,6 +4,7 @@ import LoginScreen from './LoginScreen';
 import netAttendance from './netAttendance';
 import mainTab from './drawerScreens/mainTab';
 import timeTable from './drawerScreens/timeTable';
+import sam from './drawerScreens/sam';
 import drawer from './drawer';
 import afterLogin from './afterLogin';
 export function registerScreens()
@@ -15,4 +16,5 @@ export function registerScreens()
   Navigation.registerComponent('haazri_studentApp.drawer',()=>drawer);
   Navigation.registerComponent('haazri_studentApp.afterLogin',()=>afterLogin);
   Navigation.registerComponent('haazri_studentApp.timeTable',()=>timeTable);
+  Navigation.registerComponent('haazri_studentApp.sam',()=>sam);
 }

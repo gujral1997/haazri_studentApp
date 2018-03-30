@@ -3,7 +3,6 @@ import {Navigator} from 'react-native-navigation';
 import { Text, View, ImageBackground, StyleSheet, ScrollView, PanResponder } from 'react-native';
 import { AnimatedCircularProgress,  CircularProgress } from 'react-native-circular-progress';
 import {startSingleScreenApplicationLogin} from '../../styles/navigatorStyles';
-import { Dropdown } from 'react-native-material-dropdown';
 const MAX_POINTS = 100;
 
 function colours(points)
@@ -19,11 +18,11 @@ function colours(points)
      }
 }
 
-export default class UCS401 extends React.Component {
+export default class UTA007 extends React.Component {
       constructor(props) {
             super(props);
             this.state = {
-                  points: 60,
+                  points: 90,
                   color: '#dedede'
             }
       }
