@@ -9,11 +9,11 @@ function colours(points)
 {
       if(points<=75)
      {
-            return "red";
+            return "#ef3941";
      }
      else {
             {
-                 return "green";
+                 return "#b3d568";
           }
      }
 }
