@@ -1,14 +1,14 @@
 import React from 'react';
 import {Navigator} from 'react-native-navigation';
-import { Text, View, ImageBackground, StyleSheet, ScrollView, PanResponder } from 'react-native';
+import { Text, View, ImageBackground, StyleSheet, ScrollView, PanResponder, ToastAndroid } from 'react-native';
 import { AnimatedCircularProgress,  CircularProgress } from 'react-native-circular-progress';
 import {startSingleScreenApplicationLogin} from '../../styles/navigatorStyles';
 import { Dropdown } from 'react-native-material-dropdown';
 const MAX_POINTS = 100;
 
-function colours(points)
+function colours(rating)
 {
-      if(points<=75)
+      if(rating<=40)
      {
             return "#ef3941";
      }
@@ -23,18 +23,54 @@ export default class UCS401 extends React.Component {
       constructor(props) {
             super(props);
             this.state = {
-                  points: 60,
-                  color: '#dedede'
+                  color: '#dedede',
+                  rating: 60
             }
       }
 
-
   componentDidMount() {
-        this.refs.circularProgress.performLinearAnimation(this.state.points, 1000);
+        this.refs.circularProgress.performLinearAnimation(this.state.rating, 1000);
+        return fetch('http://192.168.56.1:3000/rating',{
+          method:'POST',
+          headers:{
+            'Accept':'application/json',
+            'Content-Type':'application/json',
+          }
+        })
+          .then((response) => response.json())
+          .then((responseJson) => {
+            let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+            this.setState({
+              isLoading: false,
+              dataSource: ds.cloneWithRows(responseJson.message),
+            }, function() {
+              // do something with new state
+            });
+          })
+          .catch(() => {
+                this.props.navigator.push({
+                     screen: "navigation.afterLogin"
+              })
+                ToastAndroid.showWithGravityAndOffset(
+                         'Can\'t connect to Internet!',
+                         ToastAndroid.LONG,
+                         ToastAndroid.BOTTOM,
+                         25,
+                         50
+                       );
+          });
   }
-
   render() {
-    const fill = this.state.points / MAX_POINTS * 100;
+
+        if (this.state.isLoading) {
+          return (
+            <View style={{flex: 1, paddingTop: 20}}>
+              <ActivityIndicator />
+            </View>
+          );
+        }
+        
+    const fill = this.state.rating / MAX_POINTS * 100;
 
     return (
       <View
@@ -42,15 +78,15 @@ export default class UCS401 extends React.Component {
        >
         <AnimatedCircularProgress
           size={200}
-          width={30}
+          width={5}
           fill={fill}
-          tintColor={colours(this.state.points)}
+          tintColor={colours(this.state.rating)}
           backgroundColor="#3d5875"
           ref='circularProgress'
         >
           {
             (fill) => (
-              <Text style={styles.points}>
+              <Text style={styles.rating}>
                 { Math.round(MAX_POINTS * fill / 100) } %
               </Text>
         )
@@ -62,14 +98,14 @@ export default class UCS401 extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  points: {
+  rating: {
     backgroundColor: 'transparent',
     position: 'absolute',
-    top: 47,
-    left: 30,
+    top: 75,
+    left: 50,
     width: 90,
     textAlign: 'center',
-    color: '#7591af',
+    color: '#fff',
     fontSize: 32,
     fontWeight: "100"
   },

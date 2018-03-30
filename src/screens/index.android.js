@@ -7,6 +7,7 @@ import timeTable from './drawerScreens/timeTable';
 import sam from './drawerScreens/sam';
 import drawer from './drawer';
 import afterLogin from './afterLogin';
+import rating from './drawerScreens/rating';
 export function registerScreens()
 {
   Navigation.registerComponent('haazri_studentApp.StartUpScreen',()=>StartUpScreen);
@@ -17,4 +18,5 @@ export function registerScreens()
   Navigation.registerComponent('haazri_studentApp.afterLogin',()=>afterLogin);
   Navigation.registerComponent('haazri_studentApp.timeTable',()=>timeTable);
   Navigation.registerComponent('haazri_studentApp.sam',()=>sam);
+  Navigation.registerComponent('haazri_studentApp.rating',()=>rating);
 }
