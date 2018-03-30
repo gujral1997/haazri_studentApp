@@ -1,62 +1,66 @@
 import React from 'react';
 import {Navigator} from 'react-native-navigation';
-import { Text, View, ImageBackground, StyleSheet, ScrollView, PanResponder } from 'react-native';
+import { Text, View, ImageBackground, StyleSheet, ScrollView, PanResponder, ToastAndroid } from 'react-native';
 import { AnimatedCircularProgress,  CircularProgress } from 'react-native-circular-progress';
 import {startSingleScreenApplicationLogin} from '../../styles/navigatorStyles';
 import { Dropdown } from 'react-native-material-dropdown';
-const MAX_POINTS = 100;
-
-function colours(points)
-{
-      if(points<=75)
-     {
-            return "#ef3941";
-     }
-     else {
-            {
-                 return "#b3d568";
-          }
-     }
-}
+import { Rating, AirbnbRating } from 'react-native-ratings';
 
 export default class UCS402 extends React.Component {
-      constructor(props) {
-            super(props);
-            this.state = {
-                  points: 60,
-                  color: '#dedede'
-            }
-      }
-
 
   componentDidMount() {
-        this.refs.circularProgress.performLinearAnimation(this.state.points, 1000);
+
   }
 
+  constructor(props)
+  {
+    super(props);
+  }
+
+  ratingCompleted(rate) {
+
+       fetch('http://192.168.56.1:3000/rating',{
+        method:'POST',
+        headers:{
+           'Accept':'application/json',
+           'Content-Type':'application/json',
+        },
+        body:JSON.stringify({
+           rating:rate
+        })
+       })
+       .then((response)=>response.json())
+       .then((res)=>{
+           alert('Rating is updated')
+           //If login,doesnt succeed
+        }
+      )
+       .catch(function(){
+             ToastAndroid.showWithGravityAndOffset(
+                      'Can\'t connect to Internet!',
+                      ToastAndroid.LONG,
+                      ToastAndroid.BOTTOM,
+                      25,
+                      50
+                    );
+       });
+
+}
+
   render() {
-    const fill = this.state.points / MAX_POINTS * 100;
 
     return (
-      <View
-        style={styles.container}
-       >
-        <AnimatedCircularProgress
-          size={200}
-          width={5}
-          fill={fill}
-          tintColor={colours(this.state.points)}
-          backgroundColor="#3d5875"
-          ref='circularProgress'
-        >
-          {
-            (fill) => (
-              <Text style={styles.points}>
-                { Math.round(MAX_POINTS * fill / 100) } %
-              </Text>
-        )
-      }
-        </AnimatedCircularProgress>
-      </View>
+      <ImageBackground
+        source= {require('../../images/review-screen.png')}
+        style={styles.container}>
+        <AirbnbRating
+              count={5}
+              reviews={["Terrible", "Bad", "Average", "OK", "Good"]}
+              defaultRating={5}
+              size={20}
+              onFinishRating={this.ratingCompleted}
+            />
+ </ImageBackground>
     );
   }
 }
@@ -77,7 +81,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#152d44',
     padding: 50
   },
 });
