@@ -139,7 +139,7 @@ export default class drawer extends Component {
                                                   </View>
                                              </View>
                                         </TouchableOpacity>
-                                        <TouchableOpacity
+                                        {/*<TouchableOpacity
                                           style={styles.button}
                                           onPress={this._goTosam.bind(this)}
                                          >
@@ -151,7 +151,7 @@ export default class drawer extends Component {
                                                          <Text style={styles.text}> SAM</Text>
                                                    </View>
                                               </View>
-                                         </TouchableOpacity>
+                                        </TouchableOpacity>*/}
                                          <TouchableOpacity
                                           style={styles.button}
                                           onPress={this._goToRating.bind(this)}
@@ -174,7 +174,7 @@ export default class drawer extends Component {
                                                           <Image source={require('../ICONS/ICONS_WHITE/02.png')} style={styles.icon}/>
                                                     </View>
                                                    <View style={{flex:8}}>
-                                                         <Text style={styles.text}> Upload</Text>
+                                                         <Text style={styles.text}> Calendar</Text>
                                                    </View>
                                               </View>
                                          </TouchableOpacity>

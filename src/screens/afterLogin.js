@@ -1,5 +1,5 @@
 import { StackNavigator, DrawerNavigator, NavigationActions  } from 'react-navigation'
-import { StyleSheet, Image, ImageBackground, Dimensions, View } from 'react-native';
+import { StyleSheet, Image, ImageBackground, Dimensions, View, TouchableOpacity } from 'react-native';
 import { Container, Header, Content, List, ListItem, Text,Title, StyleProvider, Item, Input, Button, Icon, Left } from 'native-base';
 import material from '../../native-base-theme/variables/material';
 import getTheme from '../../native-base-theme/components';
@@ -22,13 +22,13 @@ export default class afterLogin extends Component {
                   <Container>
                         <Header>
                               <Left>
-                                    <Button
-                                          transparent onPress={this.toggleDrawer}
+                                    <TouchableOpacity
+                                     onPress={this.toggleDrawer}
                                           >
                                                 <Icon name="menu" />
-                                    </Button>
+                                    </TouchableOpacity>
                               </Left>
-                          <Title style={{marginTop: 10}}>Attendance Manager</Title>
+                          <Title style={{marginTop: 5}}>Attendance Manager</Title>
                         </Header>
                         <ImageBackground source={require('../images/HOMESCREEN.jpg')} style={styles.image}>
                         <View>

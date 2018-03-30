@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { Text, View, ImageBackground, StyleSheet } from 'react-native';
+import { Text, View, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
 import {startSingleScreenApplicationLogin} from '../../styles/navigatorStyles';
-import { Container, Header, Content, List, ListItem,Title, StyleProvider } from 'native-base';
+import { Container, Header, Content, List, ListItem,Title, StyleProvider, Item, Input, Button, Icon, Left } from 'native-base';
 import material from '../../../native-base-theme/variables/material';
 import getTheme from '../../../native-base-theme/components';
 import { TabNavigator } from 'react-navigation'; // Version can be specified in package.json
@@ -33,9 +33,16 @@ export default class sam extends Component {
             return(
                   <StyleProvider style={getTheme(material)}>
                          <Container>
-                           <Header>
-                             <Title>Attendance Manager</Title>
-                           </Header>
+                               <Header>
+                                     <Left>
+                                           <TouchableOpacity
+                                            onPress={this.toggleDrawer}
+                                                 >
+                                                       <Icon name="menu" />
+                                           </TouchableOpacity>
+                                     </Left>
+                                 <Title style={{marginTop: 5}}>Attendance Manager</Title>
+                               </Header>
                               <Tabs />
                               <ImageBackground source={require('../../images/bg01.jpg')} style={styles.image}>
                               </ImageBackground>
