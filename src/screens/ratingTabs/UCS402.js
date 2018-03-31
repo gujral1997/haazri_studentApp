@@ -19,7 +19,7 @@ export default class UCS402 extends React.Component {
 
   ratingCompleted(rate) {
 
-       fetch('http://192.168.43.137:3000/rating',{
+       fetch('http://192.168.56.1:3000/rating',{
         method:'POST',
         headers:{
            'Accept':'application/json',
