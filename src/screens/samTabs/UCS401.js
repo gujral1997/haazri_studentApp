@@ -30,7 +30,7 @@ export default class UCS401 extends React.Component {
 
   componentDidMount() {
         this.refs.circularProgress.performLinearAnimation(this.state.rating, 1000);
-        return fetch('http://192.168.56.1:3000/rating',{
+        return fetch('http://192.168.43.137:3000/rating',{
           method:'POST',
           headers:{
             'Accept':'application/json',

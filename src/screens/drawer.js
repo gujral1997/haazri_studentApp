@@ -96,7 +96,7 @@ export default class drawer extends Component {
                   <Container>
                         <ImageBackground source={require('../images/Background-for-Menu.jpg')} style={styles.image}>
                         <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
-                              <Thumbnail source={{uri: 'http://192.168.56.1:8000/data/sih/haazri_model/nameList/'+this.state.userName+'/1.jpg'}} style={{height: 100, width: 100}} />
+                              <Thumbnail source={{uri: 'http://192.168.43.137:8000/data/sih/haazri_model/nameList/ansh/1.jpg'}} style={{height: 100, width: 100}} />
                               <Text style={styles.title}>Welcome {this.state.userName}!</Text>
                         </View>
                               <View style = {{flex:3}}>
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
   icon: {
     height: 24,
     width: 24,
-    marginTop: 5,
+    marginTop: 9,
   },
   image: {
 width: width,
@@ -211,7 +211,7 @@ height: height
  },
  button: {
     backgroundColor: 'transparent',
-    padding: 30
+    padding: 33
   },
   text: {
         color: '#fff',
